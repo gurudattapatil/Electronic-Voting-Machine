@@ -1,0 +1,1513 @@
+EMU8086 GENERATED LISTING. MACHINE CODE <- SOURCE.
+ 
+p1.bin -- emu8086 assembler version: 4.08  
+ 
+[ 09-04-2020  --  11:45:10 ] 
+ 
+===================================================================================================
+[LINE]     LOC: MACHINE CODE                          SOURCE
+===================================================================================================
+ 
+[   1]        :                                       #make_bin#
+[   2]        :                                       
+[   3]        :                                       #LOAD_SEGMENT=FFFFh#
+[   4]        :                                       #LOAD_OFFSET=0000h#
+[   5]        :                                       
+[   6]        :                                       #CS=0000h#
+[   7]        :                                       #IP=0000h#
+[   8]        :                                       
+[   9]        :                                       #DS=0000h#
+[  10]        :                                       #ES=0000h#
+[  11]        :                                       
+[  12]        :                                       #SS=0000h#
+[  13]        :                                       #SP=0FFFEh#
+[  14]        :                                       
+[  15]        :                                       #AX=0000h#
+[  16]        :                                       #BX=0000h#
+[  17]        :                                       #CX=0000h#
+[  18]        :                                       #DX=0000h#
+[  19]        :                                       #SI=0000h#
+[  20]        :                                       #DI=0000h#
+[  21]        :                                       #BP=0000h#
+[  22]        :                                       
+[  23]        :                                       
+[  24]        :                                       
+[  25]        :                                       
+[  26]        :                                       
+[  27]        :                                       ; add your code here
+[  28]    0000: E9 58 05                              jmp     st1
+[  29]    0003: 00 00 00 00 00 00 00 00 00 00 00 00   db      125 dup(0)
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00                      
+[  30]        :                                       ;db     509 dup(0)
+[  31]        :                                       
+[  32]        :                                       ;IVT entry for 80H
+[  33]        :                                       
+[  34]    0080: 90 0C                                 dw ISR_INT2
+[  35]    0082: 00 00                                 dw 0000h
+[  36]        :                                       		
+[  37]    0084: 00 00 00 00 00 00 00 00 00 00 00 00   		 db      892 dup(0)
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00 00 00 00 00 00 00 00 00 
+                00 00 00 00                         
+[  38]        :                                       
+[  39]        :                                       ;db     508 dup(0)
+[  40]        :                                       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; IVT has to be put here								;vector no. 32
+[  41]        :                                       
+[  42]        :                                       portA1		equ	00h 					;8255(For KeyPad)
+[  43]        :                                       portB1		equ	02h
+[  44]        :                                       portC1		equ	04h
+[  45]        :                                       CW1			equ	06h
+[  46]        :                                       
+[  47]        :                                       portA2		equ	10h 					;8255(For LCD)
+[  48]        :                                       portB2		equ	12h
+[  49]        :                                       portC2		equ	14h
+[  50]        :                                       CW2			equ	16h
+[  51]        :                                       
+[  52]        :                                       cntReg0		equ	30h 					;8253(Timer)
+[  53]        :                                       cntReg1		equ 	32h
+[  54]        :                                       cntReg2  	equ 	34h
+[  55]        :                                       cReg 		equ 	36h
+[  56]        :                                       
+[  57]        :                                       
+[  58]    0400: FE FE FD FE FB FE F7 FE EF FE DF FE   TABLE_K         DW      0FEFEH,0FEFDH,0FEFBH,0FEF7H,0FEEFH,0FEDFH,0FEBFH,0FE7FH
+                BF FE 7F FE                         
+[  59]    0410: FE FD FD FD FB FD F7 FD EF FD DF FD   DW      0FDFEH,0FDFDH,0FDFBH,0FDF7H,0FDEFH,0FDDFH,0FDBFH,0FD7FH
+                BF FD 7F FD                         
+[  60]    0420: FE FB FD FB FB FB F7 FB EF FB DF FB   DW      0FBFEH,0FBFDH,0FBFBH,0FBF7H,0FBEFH,0FBDFH,0FBBFH,0FB7FH
+                BF FB 7F FB                         
+[  61]    0430: FE F7 FD F7 FB F7 F7 F7 EF F7 DF F7   DW      0F7FEH,0F7FDH,0F7FBH,0F7F7H,0F7EFH,0F7DFH,0F7BFH,0F77FH
+                BF F7 7F F7                         
+[  62]    0440: FE EF FD EF FB EF F7 EF EF EF DF EF   DW      0EFFEH,0EFFDH,0EFFBH,0EFF7H,0EFEFH,0EFDFH,0EFBFH,0EF7FH
+                BF EF 7F EF                         
+[  63]    0450: FE DF FD DF FB DF F7 DF EF DF DF DF   DW      0DFFEH,0DFFDH,0DFFBH,0DFF7H,0DFEFH,0DFDFH,0DFBFH,0DF7FH
+                BF DF 7F DF                         
+[  64]    0460: FE BF FD BF FB BF F7 BF EF BF DF BF   DW      0BFFEH,0BFFDH,0BFFBH,0BFF7H,0BFEFH,0BFDFH,0BFBFH,0BF7FH
+                BF BF 7F BF                         
+[  65]    0470: FE 7F FD 7F FB 7F F7 7F EF 7F DF 7F   DW      7FFEH,7FFDH,7FFBH,7FF7H,7FEFH,7FDFH,7FBFH,7F7FH
+                BF 7F 7F 7F                         
+[  66]        :                                       
+[  67]        :                                       
+[  68]    0480: 01 F0 02 F0 03 F0 04 F0 05 F0 06 F0   DATA_K          DW      0F001H,0F002H,0F003H,0F004H,0F005H,0F006H,0F007H,0F008H
+                07 F0 08 F0                         
+[  69]    0490: 01 E0 02 E0 03 E0 04 E0 05 E0 06 E0   DW      0E001H,0E002H,0E003H,0E004H,0E005H,0E006H,0E007H,0E008H
+                07 E0 08 E0                         
+[  70]    04A0: 30 00 31 00 32 00 33 00 34 00 35 00   DW      0030H,0031H,0032H,0033H,0034H,0035H,0036H,0037H			
+                36 00 37 00                         
+[  71]    04B0: 38 00 39 00 0A 00 0B 00 41 00 42 00   DW      0038H,0039H,000AH,000BH,0041H,0042H,0043H,0044H			;;10 11-> PAUSE RESUME
+                43 00 44 00                         
+[  72]    04C0: 45 00 46 00 47 00 48 00 49 00 4A 00   DW      0045H,0046H,0047H,0048H,0049H,004AH,004BH,004CH
+                4B 00 4C 00                         
+[  73]    04D0: 4D 00 4E 00 4F 00 50 00 51 00 52 00   				DW		004DH,004EH,004FH,0050H,0051H,0052H,0053H,0054H
+                53 00 54 00                         
+[  74]    04E0: 55 00 56 00 57 00 58 00 59 00 5A 00   DW      0055H,0056H,0057H,0058H,0059H,005AH,0021H,0040H
+                21 00 40 00                         
+[  75]    04F0: 23 00 24 00 25 00 2C 00 2A 00 2D 00   DW      0023H,0024H,0025H,002CH,002AH,002DH,002FH,003EH
+                2F 00 3E 00                         
+[  76]        :                                       
+[  77]        :                                       
+[  78]        :                                       
+[  79]        :                                       				
+[  80]        :                                       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; STORES VOTES TALLY
+[  81]    0500: 00 00                                 c1votes dw ?
+[  82]    0502: 00 00                                 c2votes dw ?
+[  83]    0504: 00 00                                 c3votes dw ?
+[  84]    0506: 00 00                                 c4votes dw ?
+[  85]    0508: 00 00                                 c5votes dw ?
+[  86]    050A: 00 00                                 c6votes dw ?
+[  87]    050C: 00 00                                 c7votes dw ?
+[  88]    050E: 00 00                                 c8votes dw ?
+[  89]        :                                       
+[  90]        :                                       
+[  91]    0510: 01 F0                                 c1key 	dw 	0F001h
+[  92]    0512: 02 F0                                 c2key 	dw 	0F002h
+[  93]    0514: 03 F0                                 c3key 	dw 	0F003h
+[  94]    0516: 04 F0                                 c4key 	dw 	0F004h
+[  95]    0518: 05 F0                                 c5key 	dw 	0F005h
+[  96]    051A: 06 F0                                 c6key 	dw 	0F006h
+[  97]    051C: 07 F0                                 c7key 	dw 	0F007h
+[  98]    051E: 08 F0                                 c8key 	dw 	0F008h
+[  99]    0520: 0A 00                                 cakey	dw	000AH
+[ 100]    0522: 00 00                                 temp    dw  ?
+[ 101]        :                                       
+[ 102]        :                                       
+[ 103]        :                                       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; STORES PASSWORDS
+[ 104]    0524: 41 41 41 41 41                        passwd1 db 	'AAAAA'
+[ 105]    0529: 42 42 42 42 42                        passwd2 db 	'BBBBB'
+[ 106]    052E: 43 43 43 43 43                        passwd3 db 	'CCCCC'
+[ 107]    0533: 44 44 44 44 44                        passwd4 db 	'DDDDD'
+[ 108]    0538: 45 45 45 45 45                        passwd5 db 	'EEEEE'
+[ 109]    053D: 46 46 46 46 46                        passwd6 db 	'FFFFF'
+[ 110]    0542: 47 47 47 47 47                        passwd7 db 	'GGGGG'
+[ 111]    0547: 48 48 48 48 48                        passwd8 db 	'HHHHH'
+[ 112]    054C: 49 49 49 49 49                        passadm db	'IIIII'
+[ 113]    0551: 4A 4A 4A 4A 4A                        locker  db  'JJJJJ'
+[ 114]    0556: 4B 4B 4B 4B 4B                        unlocker db 'KKKKK'
+[ 115]        :                                       
+[ 116]        :                                       
+[ 117]        :                                       ;main program
+[ 118]        :                                       
+[ 119]    055B: FB                                    st1:      sti
+[ 120]        :                                       ; intialize ds, es,ss to start of RAM
+[ 121]    055C: B8 00 00                              mov       ax,0000h
+[ 122]    055F: 8E D8                                 mov       ds,ax
+[ 123]    0561: B8 00 02                              		  mov       ax,0200h
+[ 124]    0564: 8E C0                                 mov       es,ax
+[ 125]    0566: 8E D0                                 mov       ss,ax
+[ 126]    0568: BC FE 0F                              mov       sp,0FFEH	;Initializing SP
+[ 127]        :                                       
+[ 128]    056B: B0 90                                 mov AL,10010000b		;To set Port A in inp mode for rows and Port B in out mode for columns and port c lower as o/p for alarm led
+[ 129]    056D: E6 06                                 	  out CW1,AL				;To initialize 8255 at 00H for Keypad
+[ 130]    056F: B0 80                                 	      mov AL,10000000b		;To set the Port A, B and C in outp mode
+[ 131]    0571: E6 16                                 out CW2,AL				;To initialize 8255 at 10H for LCD
+[ 132]        :                                       
+[ 133]        :                                       
+[ 134]        :                                       			
+[ 135]        :                                       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; MAIN FUNCTION
+[ 136]    0573: EB 03                                 			jmp START
+[ 137]        :                                       
+[ 138]    0575:                                       ALARM:		
+[ 139]    0575: E8 FC 06                              call raise_alarm
+[ 140]    0578:                                       START:
+[ 141]    0578: BA 00 00                              			mov     dx,0000h					 ;To initialize memory locations for count storage with 0000h
+[ 142]    057B: 89 16 00 05                           			mov 	c1votes,dx
+[ 143]    057F: 89 16 02 05                           			mov		c2votes,dx
+[ 144]    0583: 89 16 04 05                           			mov		c3votes,dx
+[ 145]    0587: 89 16 06 05                           			mov		c4votes,dx
+[ 146]    058B: 89 16 08 05                           			mov		c5votes,dx
+[ 147]    058F: 89 16 0A 05                           			mov		c6votes,dx
+[ 148]    0593: 89 16 0C 05                           			mov		c7votes,dx
+[ 149]    0597: 89 16 0E 05                           			mov		c8votes,dx
+[ 150]        :                                       			
+[ 151]        :                                       			;call clear_lcd
+[ 152]    059B: E8 C3 02                              			call initialise_lcd
+[ 153]    059E: E8 0D 03                              			call clear_lcd
+[ 154]        :                                       									
+[ 155]    05A1: E8 37 04                              	m1:		call disp_c1
+[ 156]    05A4: E8 D9 05                              			call disp_passwd
+[ 157]    05A7: BE 24 05                              			LEA 	SI,passwd1                   ;To check for candidate 1
+[ 158]    05AA: E8 D0 01                              			CALL    CHECKPASS
+[ 159]    05AD: 83 FD 00                              			cmp bp,0h
+[ 160]    05B0: 74 EF                                 			jz m1
+[ 161]    05B2: E8 69 03                              			call disp_correct
+[ 162]        :                                       			
+[ 163]    05B5: E8 37 04                              	m2:		call disp_c2
+[ 164]    05B8: E8 C5 05                              			call disp_passwd
+[ 165]    05BB: BE 29 05                              			LEA 	SI,passwd2                   ;To check for candidate 2
+[ 166]    05BE: E8 BC 01                              			CALL    CHECKPASS
+[ 167]    05C1: 83 FD 00                              			cmp bp,0h
+[ 168]    05C4: 74 EF                                 			jz m2
+[ 169]    05C6: E8 55 03                              			call disp_correct
+[ 170]        :                                       			
+[ 171]    05C9: E8 37 04                              	m3:		call disp_c3
+[ 172]    05CC: E8 B1 05                              			call disp_passwd
+[ 173]    05CF: BE 2E 05                              			LEA 	SI,passwd3                   ;To check for candidate 3
+[ 174]    05D2: E8 A8 01                              			CALL    CHECKPASS
+[ 175]    05D5: 83 FD 00                              			cmp bp,0h
+[ 176]    05D8: 74 EF                                 			jz m3
+[ 177]    05DA: E8 41 03                              			call disp_correct
+[ 178]        :                                       			
+[ 179]    05DD: E8 37 04                              	m4:		call disp_c4
+[ 180]    05E0: E8 9D 05                              			call disp_passwd
+[ 181]    05E3: BE 33 05                              			LEA 	SI,passwd4                   ;To check for candidate 4
+[ 182]    05E6: E8 94 01                              			CALL    CHECKPASS
+[ 183]    05E9: 83 FD 00                              			cmp bp,0h
+[ 184]    05EC: 74 EF                                 			jz m4
+[ 185]    05EE: E8 2D 03                              			call disp_correct
+[ 186]        :                                       			
+[ 187]    05F1: E8 37 04                              	m5:		call disp_c5
+[ 188]    05F4: E8 89 05                              			call disp_passwd
+[ 189]    05F7: BE 38 05                              			LEA 	SI,passwd5                   ;To check for candidate 5
+[ 190]    05FA: E8 80 01                              			CALL    CHECKPASS
+[ 191]    05FD: 83 FD 00                              			cmp bp,0h
+[ 192]    0600: 74 EF                                 			jz m5
+[ 193]    0602: E8 19 03                              			call disp_correct
+[ 194]        :                                       			
+[ 195]    0605: E8 37 04                              	m6:		call disp_c6
+[ 196]    0608: E8 75 05                              			call disp_passwd
+[ 197]    060B: BE 3D 05                              			LEA 	SI,passwd6                   ;To check for candidate 6
+[ 198]    060E: E8 6C 01                              			CALL    CHECKPASS
+[ 199]    0611: 83 FD 00                              			cmp bp,0h
+[ 200]    0614: 74 EF                                 			jz m6
+[ 201]    0616: E8 05 03                              			call disp_correct
+[ 202]        :                                       			
+[ 203]    0619: E8 37 04                              	m7:		call disp_c7
+[ 204]    061C: E8 61 05                              			call disp_passwd
+[ 205]    061F: BE 42 05                              			LEA 	SI,passwd7                   ;To check for candidate 7
+[ 206]    0622: E8 58 01                              			CALL    CHECKPASS
+[ 207]    0625: 83 FD 00                              			cmp bp,0h
+[ 208]    0628: 74 EF                                 			jz m7
+[ 209]    062A: E8 F1 02                              			call disp_correct
+[ 210]        :                                       			
+[ 211]    062D: E8 37 04                              	m8:		call disp_c8
+[ 212]    0630: E8 4D 05                              			call disp_passwd
+[ 213]    0633: BE 47 05                              			LEA 	SI,passwd8                   ;To check for candidate 8
+[ 214]    0636: E8 44 01                              			CALL    CHECKPASS
+[ 215]    0639: 83 FD 00                              			cmp bp,0h
+[ 216]    063C: 74 EF                                 			jz m8
+[ 217]    063E: E8 DD 02                              			call disp_correct
+[ 218]        :                                       			
+[ 219]    0641: E8 37 04                              	m9:		call disp_admin
+[ 220]    0644: E8 39 05                              			call disp_passwd
+[ 221]    0647: BE 4C 05                              			LEA 	SI,passadm                   ;To check for officer
+[ 222]    064A: E8 30 01                              			CALL    CHECKPASS
+[ 223]    064D: 83 FD 00                              			cmp bp,0h
+[ 224]    0650: 74 EF                                 			jz m9
+[ 225]    0652: E8 C9 02                              			call disp_correct
+[ 226]        :                                       			
+[ 227]        :                                       			
+[ 228]        :                                       			
+[ 229]    0655: B0 34                                 			mov 	AL,00110100b		;Setting counter0 into mode 2
+[ 230]    0657: E6 36                                 			out		cReg,AL
+[ 231]        :                                       			;mov al,'/'
+[ 232]        :                                       			;call write_lcd
+[ 233]        :                                       			
+[ 234]    0659: B0 C4                                 			mov 	AL,0c4h				;Setting count(2500) in counter0 ???CHANGE COUNT VALUE TO 2500 ---
+[ 235]    065B: E6 30                                 			out		cntReg0,AL
+[ 236]    065D: B0 09                                 			mov 	AL,09h
+[ 237]    065F: E6 30                                 			out		cntReg0,AL
+[ 238]        :                                       			;mov al,'/'
+[ 239]        :                                       			;call write_lcd
+[ 240]        :                                       			
+[ 241]    0661: B0 74                                 			mov 	AL,01110100b		;Setting counter0 into mode 2
+[ 242]    0663: E6 36                                 			out		cReg,AL
+[ 243]        :                                       			;mov al,'/'
+[ 244]        :                                       			;call write_lcd
+[ 245]        :                                       			
+[ 246]    0665: B0 E8                                 			mov 	AL,0e8h				;Setting count(2500) in counter0 ???CHANGE COUNT VALUE TO 2500 ---
+[ 247]    0667: E6 32                                 			out		cntReg1,AL
+[ 248]    0669: B0 03                                 			mov 	AL,03h
+[ 249]    066B: E6 32                                 			out		cntReg1,AL
+[ 250]        :                                       			;mov al,'/'
+[ 251]        :                                       			;call write_lcd
+[ 252]        :                                       			
+[ 253]    066D: B0 B4                                 			mov 	AL,10110100b		;Setting counter0 into mode 2
+[ 254]    066F: E6 36                                 			out		cReg,AL
+[ 255]        :                                       			;mov al,'/'
+[ 256]        :                                       			;call write_lcd
+[ 257]        :                                       			
+[ 258]    0671: B0 A0                                 			mov 	AL,0A0h				;Setting count(2500) in counter0 ???CHANGE COUNT VALUE TO 2500 ---
+[ 259]    0673: E6 34                                 			out		cntReg2,AL
+[ 260]    0675: B0 8C                                 			mov 	AL,8ch
+[ 261]    0677: E6 34                                 			out		cntReg2,AL
+[ 262]        :                                       			;mov al,'/'
+[ 263]        :                                       			;call write_lcd
+[ 264]        :                                       
+[ 265]    0679: E8 35 05                              			call disp_start_voting
+[ 266]        :                                       
+[ 267]    067C:                                       	fetchVote:
+[ 268]        :                                       			;mov al,'/'
+[ 269]        :                                       			;call write_lcd
+[ 270]    067C: E8 33 01                              			CALL    GetVotingData
+[ 271]    067F: EB FB                                 			jmp		fetchVote			
+[ 272]        :                                       
+[ 273]        :                                       					
+[ 274]        :                                       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ISR when 'CA' is pressed
+[ 275]        :                                       			
+[ 276]    0681:                                       isr_1:		;mov al,00h					;checking for press of 'ca'
+[ 277]        :                                       			;out portB1,al
+[ 278]        :                                       			;in al,portA1
+[ 279]        :                                       			;cmp al,0ffh
+[ 280]        :                                       			;jz y3						;if no key press detected return from isr
+[ 281]        :                                       			;call delay
+[ 282]        :                                       			;mov al,00h
+[ 283]        :                                       			;out portB1,al
+[ 284]        :                                       			;in al,portA1
+[ 285]        :                                       			;cmp al,0ffh
+[ 286]        :                                       			;jz y3						;if no key press detected return from isr
+[ 287]        :                                       			
+[ 288]    0681: E8 04 03                              			call disp_ent_pass			;ask for password
+[ 289]    0684: BE 51 05                              			lea si,locker				;locker is the address of password to lock
+[ 290]    0687: E8 F3 00                              			call CHECKPASS				
+[ 291]    068A: 83 FD 00                              			cmp bp,0000h
+[ 292]    068D: 74 23                                 			jz y4						;if wrong password output incorrect and jump to iret i.e., y4
+[ 293]        :                                       			;---CODE ABOVE IS NOT REQUIRED!
+[ 294]        :                                       							
+[ 295]    068F: E8 2C 02                              			call disp_locked			;if correct password output then system locked
+[ 296]    0692: EB 03                                 			jmp y2
+[ 297]        :                                       			;actually,if we want, we can compare the i/p key with 'ca', but not needed as intr occurs only when 'ca' is pressed
+[ 298]        :                                       	
+[ 299]    0694:                                       	y5:		;call disp_incorrect  no need as this is already displayed at the end of CHECKPASS procedure		
+[ 300]        :                                       			;call raise_alarm
+[ 301]    0694: E8 27 02                              			call disp_locked
+[ 302]        :                                       			
+[ 303]    0697: E8 1E 00                              	y2:		call getKeyData
+[ 304]        :                                       			
+[ 305]    069A: 80 FB 0B                              			cmp bl,000bh					;give the row of 'f$' as second parameter
+[ 306]    069D: 75 F8                                 			jnz y2
+[ 307]        :                                       			
+[ 308]    069F: E8 E6 02                              			call disp_ent_pass			;ask for password
+[ 309]    06A2: BE 56 05                              			lea si,unlocker				;unlocker is the address of password to unlock
+[ 310]    06A5: E8 D5 00                              			call CHECKPASS				
+[ 311]    06A8: 83 FD 00                              			cmp bp,0000h
+[ 312]    06AB: 74 E7                                 			jz y5						;if wrong password output display incorrect, jump to y5
+[ 313]        :                                       			
+[ 314]    06AD: E8 36 02                              			call disp_unlocked			;if correct output unlocked and get out of isr
+[ 315]    06B0: EB 03                                 			jmp y3
+[ 316]        :                                       	
+[ 317]    06B2:                                       	y4:		;call disp_incorrect  no need as this is already displayed at the end of CHECKPASS procedure
+[ 318]        :                                       			;call raise_alarm
+[ 319]    06B2: E8 48 05                              			call disp_not_locked
+[ 320]        :                                       	
+[ 321]    06B5: E9 A8 01                              	y3:		jmp final
+[ 322]        :                                       			
+[ 323]        :                                       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; FUNCTION TO GET THE DATA FROM THE KEY PRESSED ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[ 324]        :                                       
+[ 325]        :                                       
+[ 326]    06B8:                                       getKeyData proc 	near
+[ 327]        :                                       
+[ 328]        :                                       ;;;;;;;;;;;;;;;; REMEMBER TO INITIALIZE THE PORT B WITH ALL ZEROS;;;;;;;;;;;;;;;;;;;;;;;;;;
+[ 329]        :                                       
+[ 330]        :                                       			;??? OUTPUT 0 TO ALL COLUMNS---
+[ 331]    06B8: B0 00                                 			MOV AL,00H
+[ 332]    06BA: E6 02                                 			OUT portB1,al
+[ 333]    06BC:                                       key_release1:
+[ 334]    06BC: E4 00                                 			in al,portA1
+[ 335]    06BE: 3C FF                                 			cmp al,0FFh
+[ 336]    06C0: 75 FA                                 			jnz key_release1
+[ 337]        :                                       
+[ 338]    06C2:                                       keypad_check:
+[ 339]        :                                       	
+[ 340]        :                                       		;???TO CHECK FOR KEY PRESS FIRST OUTPUT 00 TO ALL COLS--
+[ 341]        :                                       		;mov al,'3'
+[ 342]        :                                       		;call write_lcd
+[ 343]    06C2: B0 00                                 		MOV AL,00H
+[ 344]    06C4: E6 02                                 		OUT portB1,al
+[ 345]    06C6: E4 00                                 		in 	al,portA1			;To check the key press
+[ 346]    06C8: 3C FF                                 		cmp	al,0FFh
+[ 347]    06CA: 74 F6                                 		jz keypad_check				; ???SHOULD BE : jz keypad_check---
+[ 348]        :                                       
+[ 349]        :                                       		;call delay2				;To set the delay to counter the debouncing
+[ 350]        :                                       		;???TO CHECK FOR KEY PRESS FIRST OUTPUT 00 TO ALL COLS---
+[ 351]    06CC: B0 00                                 		MOV AL,00H
+[ 352]    06CE: E6 02                                 		OUT portB1,al
+[ 353]        :                                       
+[ 354]    06D0: E4 00                                 		in 	al,portA1
+[ 355]    06D2: 3C FF                                 		cmp	al,0FFh
+[ 356]    06D4: 74 EC                                 		jz	keypad_check			;???SHOULD BE - jz keypad_check---
+[ 357]        :                                       
+[ 358]        :                                       
+[ 359]    06D6: B0 FE                                 		mov	al,0FEh				;To check the cloumn 0 press
+[ 360]    06D8: 8A D8                                 		mov	bl,al
+[ 361]    06DA: E6 02                                 		out	portB1,al
+[ 362]    06DC: E4 00                                 		in 	al,portA1
+[ 363]    06DE: 3C FF                                 		cmp	al,0FFh
+[ 364]    06E0: 75 56                                 		jnz	getData
+[ 365]        :                                       
+[ 366]    06E2: B0 FD                                 		mov	al,0FDh				;To check the cloumn 1 press
+[ 367]    06E4: 8A D8                                 		mov	bl,al
+[ 368]    06E6: E6 02                                 		out	portB1,al
+[ 369]    06E8: E4 00                                 		in 	al,portA1
+[ 370]    06EA: 3C FF                                 		cmp	al,0FFh
+[ 371]    06EC: 75 4A                                 		jnz	getData
+[ 372]        :                                       
+[ 373]    06EE: B0 FB                                 		mov	al,0FBh				;To check the cloumn 2 press
+[ 374]    06F0: 8A D8                                 		mov	bl,al
+[ 375]    06F2: E6 02                                 		out	portB1,al
+[ 376]    06F4: E4 00                                 		in 	al,portA1
+[ 377]    06F6: 3C FF                                 		cmp	al,0FFh
+[ 378]    06F8: 75 3E                                 		jnz	getData
+[ 379]        :                                       
+[ 380]    06FA: B0 F7                                 		mov	al,0F7h				;To check the cloumn 3 press
+[ 381]    06FC: 8A D8                                 		mov	bl,al
+[ 382]    06FE: E6 02                                 		out	portB1,al
+[ 383]    0700: E4 00                                 		in 	al,portA1
+[ 384]    0702: 3C FF                                 		cmp	al,0FFh
+[ 385]    0704: 75 32                                 		jnz	getData
+[ 386]        :                                       
+[ 387]    0706: B0 EF                                 		mov	al,0EFh				;To check the cloumn 4 press
+[ 388]    0708: 8A D8                                 		mov	bl,al
+[ 389]    070A: E6 02                                 		out	portB1,al
+[ 390]    070C: E4 00                                 		in 	al,portA1
+[ 391]    070E: 3C FF                                 		cmp	al,0FFh
+[ 392]    0710: 75 26                                 		jnz	getData
+[ 393]        :                                       
+[ 394]    0712: B0 DF                                 		mov	al,0DFh				;To check the cloumn 6 press	???SHOULD BE 0DFH---
+[ 395]    0714: 8A D8                                 		mov	bl,al
+[ 396]    0716: E6 02                                 		out	portB1,al
+[ 397]    0718: E4 00                                 		in 	al,portA1
+[ 398]    071A: 3C FF                                 		cmp	al,0FFh
+[ 399]    071C: 75 1A                                 		jnz	getData
+[ 400]        :                                       
+[ 401]    071E: B0 BF                                 		mov	al,0BFh				;To check the cloumn 7 press	???SHOULD BE 0BFH---
+[ 402]    0720: 8A D8                                 		mov	bl,al
+[ 403]    0722: E6 02                                 		out	portB1,al
+[ 404]    0724: E4 00                                 		in 	al,portA1
+[ 405]    0726: 3C FF                                 		cmp	al,0FFh
+[ 406]    0728: 75 0E                                 		jnz	getData
+[ 407]        :                                       
+[ 408]    072A: B0 7F                                 		mov	al,7Fh				;To check the cloumn 8 press	???SHOULD BE 07FH---
+[ 409]    072C: 8A D8                                 		mov	bl,al
+[ 410]    072E: E6 02                                 		out	portB1,al
+[ 411]    0730: E4 00                                 		in 	al,portA1
+[ 412]    0732: 3C FF                                 		cmp	al,0FFh
+[ 413]    0734: 75 02                                 		jnz	getData
+[ 414]    0736: EB 8A                                 		jmp	keypad_check
+[ 415]        :                                       
+[ 416]    0738:                                       getData:
+[ 417]    0738: 8A F8                                 		mov	bh,al 				;The BX register now contains HEX code for the keyPress
+[ 418]    073A: 8A C3                                 		mov al,bl
+[ 419]    073C: B9 40 00                              		mov	CX,64d				;The total number of entries in the Table ???ADDED 'd' TO INDICATE DECIMAL---
+[ 420]    073F: BF 00 00                              		mov	DI,00h				
+[ 421]    0742:                                       x4:							
+[ 422]    0742: 3B 9D 00 04                           		cmp	BX,TABLE_K[DI]
+[ 423]    0746: 74 04                                 		jz 	x5
+[ 424]    0748: 47                                    		inc	DI
+[ 425]    0749: 47                                    		inc	DI
+[ 426]    074A: E2 F6                                 		loop x4
+[ 427]    074C:                                       x5:		
+[ 428]    074C: 8B DF                                 		mov bx,DI
+[ 429]    074E: BE 80 04                              		mov si,offset DATA_K
+[ 430]    0751: 8A 00                                 		mov al,[si+bx]
+[ 431]    0753: 8A 60 01                              		mov ah,[si+bx+1]			
+[ 432]    0756: 8B D8                                 		mov    bx,ax				;BX NOW HAS THE 16BIT DATA KEY VALUE
+[ 433]        :                                       	
+[ 434]    0758: C3                                    		RET
+[ 435]        :                                       getKeyData endp
+[ 436]        :                                       
+[ 437]        :                                       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; FUNCTION FOR THE DELAY ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[ 438]    0759:                                       delay 		proc	near
+[ 439]    0759: 51                                    			push 	cx
+[ 440]    075A: B9 84 03                              			mov 	cx,900d
+[ 441]    075D: 90                                    dl1:		nop		;3 CLK CYCLES
+[ 442]        :                                       		
+[ 443]    075E: E2 FD                                 			loop 	dl1	;18 CYCLES IF JMP IS TAKEN, 5 OTHER WISE
+[ 444]    0760: 59                                    			pop 	cx	;by now 3*900+18*899+5=18887 cycles done. DELAY GENERATED BASED ON CLK(10mhz)=1.8887ms
+[ 445]    0761: C3                                    			ret
+[ 446]        :                                       delay 		endp
+[ 447]        :                                       
+[ 448]    0762:                                       delay2 		proc	near
+[ 449]    0762: 51                                    			push 	cx
+[ 450]    0763: B9 B8 0B                              			mov 	cx,3000d
+[ 451]    0766: 90                                    dl2:		nop		;3 CLK CYCLES
+[ 452]    0767: 90                                    			nop		;3 CLK CYCLES
+[ 453]    0768: E2 FC                                 			loop 	dl2	;18 CYCLES IF JMP IS TAKEN, 5 OTHER WISE
+[ 454]    076A: 59                                    			pop 	cx	;by now 6*3000+18*2999+5= 18000+53982+5cycles done. DELAY GENERATED BASED ON CLK(10mhz)=1.8887ms
+[ 455]    076B: C3                                    			ret	
+[ 456]        :                                       delay2 		endp
+[ 457]        :                                       
+[ 458]    076C:                                       delay3		proc 	near
+[ 459]    076C: 51                                    			push cx
+[ 460]    076D: B9 14 00                              				mov cx,20
+[ 461]    0770: E8 E6 FF                              	looper:		call delay
+[ 462]    0773: E8 E3 FF                              				call delay
+[ 463]    0776: E8 E0 FF                              				call delay
+[ 464]    0779: E2 F5                                 				loop looper
+[ 465]    077B: 59                                    			pop cx
+[ 466]    077C: C3                                    			ret
+[ 467]        :                                       delay3		endp
+[ 468]        :                                       			
+[ 469]        :                                       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; POLLED VOTES AT THE END ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[ 470]        :                                       
+[ 471]        :                                       
+[ 472]        :                                       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; parameters: offest for the
+[ 473]    077D:                                       CHECKPASS   proc    near						
+[ 474]    077D: 89 36 22 05                           			mov temp,si
+[ 475]    0781: BD 03 00                              			mov		bp,0003h	;3 chances for the input ???3H OR 3d (DECIMAL)
+[ 476]        :                                       			
+[ 477]    0784:                                       candidate_auth:	
+[ 478]        :                                       ;push cx
+[ 479]    0784: 8B 36 22 05                           			mov si,temp
+[ 480]    0788: E8 23 01                              			call clear_lcd
+[ 481]    078B: BA 05 00                              			mov		dx,0005h		;5 characters in the password
+[ 482]    078E:                                       		passwordinp:
+[ 483]        :                                       		
+[ 484]    078E: 56                                    			push si     ; getKeyData will use si,cx hence push onto stack
+[ 485]    078F: E8 26 FF                              			call getKeyData
+[ 486]    0792: B0 2A                                 			mov al,'*'
+[ 487]    0794: E8 FC 00                              			call write_lcd
+[ 488]    0797: 5E                                    			pop si
+[ 489]        :                                       						
+[ 490]    0798: 3E 3A 1C                              			cmp	bl,ds:[SI]	
+[ 491]    079B: 75 08                                 			jnz	wronginp1	
+[ 492]    079D: 46                                    			inc	si	
+[ 493]    079E: 4A                                    			dec 	dx
+[ 494]    079F: 83 FA 00                              			cmp 	dx,0h
+[ 495]    07A2: 75 EA                                 			jnz 	passwordinp
+[ 496]        :                                       			;pop cx
+[ 497]    07A4: C3                                    			ret
+[ 498]    07A5:                                       		wronginp1:
+[ 499]        :                                       			
+[ 500]    07A5: E8 A6 01                              			CALL disp_incorrect					; CALL LCD TO DISPLAY 'INCORRECT'
+[ 501]        :                                       			;pop cx
+[ 502]    07A8: 4D                                    			dec 	bp
+[ 503]    07A9: 83 FD 00                              			cmp 	bp,0h
+[ 504]    07AC: 75 D6                                 			jnz		candidate_auth				;CALL RAISE ALARM (Raise the LED and restart the system). This is done at the end of taking i/p from each candidate	
+[ 505]    07AE: E8 C3 04                              			call raise_alarm
+[ 506]    07B1: C3                                    			ret	
+[ 507]        :                                       CHECKPASS  endp
+[ 508]        :                                       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; GETTING VOTES FROM KEYPAD
+[ 509]        :                                       
+[ 510]    07B2:                                       GetVotingData proc 	near
+[ 511]    07B2: E8 03 FF                              			 		CALL getKeyData
+[ 512]        :                                       					;mov ax,'h'
+[ 513]        :                                       					;call write_lcd
+[ 514]    07B5: 3B 1E 10 05                           					cmp  bx,c1key
+[ 515]    07B9: 75 0F                                 					jnz  candidate2
+[ 516]    07BB: E8 E0 02                              					call disp_voted
+[ 517]    07BE: FF 06 00 05                           					inc  c1votes				;???compare c1votes 270f
+[ 518]    07C2: A1 00 05                              					mov ax,c1votes
+[ 519]    07C5: 04 30                                 					add al,30h
+[ 520]        :                                       					;call write_lcd
+[ 521]    07C7: E9 96 00                              					jmp	 final
+[ 522]    07CA:                                       		candidate2:
+[ 523]    07CA: 3B 1E 12 05                           					cmp  bx,c2key
+[ 524]    07CE: 75 0F                                 					jnz  candidate3
+[ 525]    07D0: E8 CB 02                              					call disp_voted
+[ 526]    07D3: FF 06 02 05                           					inc  c2votes
+[ 527]    07D7: A1 02 05                              					mov ax,c2votes
+[ 528]    07DA: 04 30                                 					add al,30h
+[ 529]        :                                       					;call write_lcd
+[ 530]    07DC: E9 81 00                              					jmp	 final
+[ 531]    07DF:                                       		candidate3:
+[ 532]    07DF: 3B 1E 14 05                           					cmp  bx,c3key
+[ 533]    07E3: 75 0E                                 					jnz  candidate4
+[ 534]    07E5: E8 B6 02                              					call disp_voted
+[ 535]    07E8: FF 06 04 05                           					inc  c3votes
+[ 536]    07EC: A1 04 05                              					mov ax,c3votes
+[ 537]    07EF: 04 30                                 					add al,30h
+[ 538]        :                                       					;call write_lcd
+[ 539]    07F1: EB 6D                                 					jmp	 final
+[ 540]    07F3:                                       		candidate4:
+[ 541]    07F3: 3B 1E 16 05                           					cmp  bx,c4key
+[ 542]    07F7: 75 0E                                 					jnz  candidate5
+[ 543]    07F9: E8 A2 02                              					call disp_voted
+[ 544]    07FC: FF 06 06 05                           					inc  c4votes
+[ 545]    0800: A1 06 05                              					mov ax,c4votes
+[ 546]    0803: 04 30                                 					add al,30h
+[ 547]        :                                       					;call write_lcd
+[ 548]    0805: EB 59                                 					jmp	 final
+[ 549]    0807:                                       		candidate5:
+[ 550]    0807: 3B 1E 18 05                           					cmp  bx,c5key
+[ 551]    080B: 75 0E                                 					jnz  candidate6
+[ 552]    080D: E8 8E 02                              					call disp_voted
+[ 553]    0810: FF 06 08 05                           					inc  c5votes
+[ 554]    0814: A1 08 05                              					mov ax,c5votes
+[ 555]    0817: 04 30                                 					add al,30h
+[ 556]        :                                       					;call write_lcd
+[ 557]    0819: EB 45                                 					jmp	 final
+[ 558]    081B:                                       		candidate6:
+[ 559]    081B: 3B 1E 1A 05                           					cmp  bx,c6key
+[ 560]    081F: 75 0E                                 					jnz  candidate7
+[ 561]    0821: E8 7A 02                              					call disp_voted
+[ 562]    0824: FF 06 0A 05                           					inc  c6votes
+[ 563]    0828: A1 0A 05                              					mov ax,c6votes
+[ 564]    082B: 04 30                                 					add al,30h
+[ 565]        :                                       					;call write_lcd
+[ 566]    082D: EB 31                                 					jmp	 final
+[ 567]    082F:                                       		candidate7:
+[ 568]    082F: 3B 1E 1C 05                           					cmp  bx,c7key
+[ 569]    0833: 75 0E                                 					jnz  candidate8
+[ 570]    0835: E8 66 02                              					call disp_voted
+[ 571]    0838: FF 06 0C 05                           					inc  c7votes
+[ 572]    083C: A1 0C 05                              					mov ax,c7votes
+[ 573]    083F: 04 30                                 					add al,30h
+[ 574]        :                                       					;call write_lcd
+[ 575]    0841: EB 1D                                 					jmp	 final
+[ 576]    0843:                                       		candidate8:
+[ 577]    0843: 3B 1E 1E 05                           					cmp  bx,c8key
+[ 578]    0847: 75 0E                                 					jnz  ca
+[ 579]    0849: E8 52 02                              					call disp_voted
+[ 580]    084C: FF 06 0E 05                           					inc  c8votes
+[ 581]    0850: A1 0E 05                              					mov ax,c8votes
+[ 582]    0853: 04 30                                 					add al,30h
+[ 583]        :                                       					;call write_lcd
+[ 584]    0855: EB 09                                 					jmp	 final
+[ 585]        :                                       
+[ 586]    0857:                                       		ca:			
+[ 587]    0857: 3B 1E 20 05                           					cmp  bx,cakey
+[ 588]    085B: 75 03                                 					jnz  final
+[ 589]    085D: E9 21 FE                              					jmp isr_1
+[ 590]        :                                       					;jmp	 final
+[ 591]    0860:                                       		final:	
+[ 592]    0860: C3                                    					ret
+[ 593]        :                                       GetVotingData endp
+[ 594]        :                                       
+[ 595]        :                                       
+[ 596]        :                                       	
+[ 597]        :                                       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; LCD functions
+[ 598]    0861:                                       initialise_lcd	proc near
+[ 599]        :                                       
+[ 600]    0861: B0 80                                 				mov al,10000000b		;Initialising 8255(2)
+[ 601]    0863: E6 16                                 				out CW2,al			;portA2 is o/p and is connected to data lines d0-d7 and pc7-pc5 are o/p and connected to rs,r/w and e resp.
+[ 602]        :                                       
+[ 603]        :                                       				;STEP 1
+[ 604]    0865: B0 30                                 				mov al,00110000b		;PAGE 40 STEP NO.2
+[ 605]    0867: E6 10                                 				out portA2,al			;function setting over
+[ 606]    0869: B0 20                                 				mov al, 00100000b		;set E=0;setting to 8bit operation and 1 line i.e.,function setting		;pc7,pc6-0,p5=1
+[ 607]    086B: E6 14                                 				out portC2,al		
+[ 608]    086D: B0 00                                 				mov al, 00000000b		;set E=1;
+[ 609]    086F: E6 14                                 				out portC2,al		
+[ 610]    0871: E8 E5 FE                              				call delay
+[ 611]        :                                       							
+[ 612]        :                                       				;STEP2
+[ 613]    0874: B0 0E                                 				mov al,00001110b
+[ 614]    0876: E6 10                                 				out portA2,al			;display switched on
+[ 615]    0878: B0 20                                 				mov al,00100000b		;switching on display		;E=0
+[ 616]    087A: E6 14                                 				out portC2,al			
+[ 617]    087C: B0 00                                 				mov al, 00000000b		;set E=1;
+[ 618]    087E: E6 14                                 				out portC2,al
+[ 619]    0880: E8 D6 FE                              				call delay
+[ 620]        :                                       		
+[ 621]        :                                       				;STEP3
+[ 622]    0883: B0 06                                 				mov al,00000110b		;setting address to increment by 1 and diplay shifting enabled i.e., entry mode set	
+[ 623]    0885: E6 10                                 				out portA2,al			;??? SHOULDNT IT BE 0000 0110B ?---
+[ 624]    0887: B0 20                                 				mov al,00100000b		;E=0
+[ 625]    0889: E6 14                                 				out portC2,al
+[ 626]    088B: B0 00                                 				mov al, 00000000b		;set E=1;
+[ 627]    088D: E6 14                                 				out portC2,al		
+[ 628]    088F: E8 C7 FE                              				call delay
+[ 629]    0892: C3                                    				ret
+[ 630]        :                                       initialise_lcd	endp
+[ 631]        :                                       				
+[ 632]    0893:                                       write_lcd		proc near				;before calling this, al must be loaded with the ascii value
+[ 633]    0893: E6 10                                 				out portA2,al			;data written to lcd			
+[ 634]    0895: B0 A0                                 				mov al,10100000b		;setting to write mode		;pc7-1,pc6-0,p5=0
+[ 635]    0897: E6 14                                 				out portC2,al
+[ 636]    0899: B0 80                                 				mov al, 10000000b		;set E=1;
+[ 637]    089B: E6 14                                 				out portC2,al
+[ 638]    089D: 51                                    				push cx
+[ 639]    089E: B9 0A 00                              				mov cx,10
+[ 640]    08A1: E8 B5 FE                              		d:		call delay
+[ 641]    08A4: E8 B2 FE                              				call delay
+[ 642]    08A7: E8 AF FE                              				call delay
+[ 643]    08AA: E2 F5                                 				loop d
+[ 644]    08AC: 59                                    				pop cx
+[ 645]    08AD: C3                                    				ret
+[ 646]        :                                       write_lcd		endp
+[ 647]        :                                       
+[ 648]    08AE:                                       clear_lcd		proc near
+[ 649]    08AE: B0 01                                 				mov al,00000001b
+[ 650]    08B0: E6 10                                 				out portA2,al			;lcd cleared
+[ 651]    08B2: B0 20                                 				mov al,00100000b		;clearing display of lcd		;pc7,pc6-0,p5=0
+[ 652]    08B4: E6 14                                 				out portC2,al
+[ 653]    08B6: B0 00                                 				mov al, 00000000b		;set E=1;
+[ 654]    08B8: E6 14                                 				out portC2,al		
+[ 655]    08BA: E8 9C FE                              				call delay				
+[ 656]    08BD: C3                                    				ret
+[ 657]        :                                       clear_lcd		endp
+[ 658]        :                                       
+[ 659]    08BE:                                       disp_locked	proc near
+[ 660]    08BE: E8 ED FF                              				call clear_lcd			;???CALL CLEAR LCD
+[ 661]    08C1: E8 95 FE                              				call delay
+[ 662]    08C4: E8 92 FE                              				call delay
+[ 663]    08C7: B0 4C                                 				mov al,'L'
+[ 664]    08C9: E8 C7 FF                              				call write_lcd
+[ 665]    08CC: B0 6F                                 				mov al,'o'			;??? PREVIOUSLY '0'---
+[ 666]    08CE: E8 C2 FF                              				call write_lcd
+[ 667]    08D1: B0 63                                 				mov al,'c'
+[ 668]    08D3: E8 BD FF                              				call write_lcd
+[ 669]    08D6: B0 6B                                 				mov al,'k'
+[ 670]    08D8: E8 B8 FF                              				call write_lcd
+[ 671]    08DB: B0 65                                 				mov al,'e'
+[ 672]    08DD: E8 B3 FF                              				call write_lcd
+[ 673]    08E0: B0 64                                 				mov al,'d'
+[ 674]    08E2: E8 AE FF                              				call write_lcd
+[ 675]    08E5: C3                                    				ret
+[ 676]        :                                       disp_locked	endp
+[ 677]        :                                       
+[ 678]    08E6:                                       disp_unlocked	proc near
+[ 679]    08E6: E8 C5 FF                              				call clear_lcd			;CALL CLEAR_LCD
+[ 680]    08E9: E8 6D FE                              				call delay
+[ 681]    08EC: E8 6A FE                              				call delay
+[ 682]    08EF: B0 55                                 				mov al,'U'
+[ 683]    08F1: E8 9F FF                              				call write_lcd
+[ 684]    08F4: B0 6E                                 				mov al,'n'
+[ 685]    08F6: E8 9A FF                              				call write_lcd
+[ 686]    08F9: B0 6C                                 				mov al,'l'
+[ 687]    08FB: E8 95 FF                              				call write_lcd
+[ 688]    08FE: B0 6F                                 				mov al,'o'				;??? PREVIOUSLY '0'---
+[ 689]    0900: E8 90 FF                              				call write_lcd
+[ 690]    0903: B0 63                                 				mov al,'c'
+[ 691]    0905: E8 8B FF                              				call write_lcd
+[ 692]    0908: B0 6B                                 				mov al,'k'
+[ 693]    090A: E8 86 FF                              				call write_lcd
+[ 694]    090D: B0 65                                 				mov al,'e'
+[ 695]    090F: E8 81 FF                              				call write_lcd
+[ 696]    0912: B0 64                                 				mov al,'d'
+[ 697]    0914: E8 7C FF                              				call write_lcd
+[ 698]    0917: E8 52 FE                              				call delay3
+[ 699]    091A: E8 91 FF                              				call clear_lcd
+[ 700]    091D: C3                                    				ret
+[ 701]        :                                       disp_unlocked	endp
+[ 702]        :                                       
+[ 703]    091E:                                       disp_correct	proc near
+[ 704]    091E: E8 8D FF                              				call clear_lcd			;??? CALL CLEAR_LCD
+[ 705]    0921: E8 35 FE                              				call delay
+[ 706]    0924: E8 32 FE                              				call delay
+[ 707]    0927: B0 43                                 				mov al,'C'
+[ 708]    0929: E8 67 FF                              				call write_lcd
+[ 709]    092C: B0 6F                                 				mov al,'o'
+[ 710]    092E: E8 62 FF                              				call write_lcd
+[ 711]    0931: B0 72                                 				mov al,'r'
+[ 712]    0933: E8 5D FF                              				call write_lcd
+[ 713]    0936: B0 72                                 				mov al,'r'
+[ 714]    0938: E8 58 FF                              				call write_lcd
+[ 715]    093B: B0 65                                 				mov al,'e'
+[ 716]    093D: E8 53 FF                              				call write_lcd
+[ 717]    0940: B0 63                                 				mov al,'c'
+[ 718]    0942: E8 4E FF                              				call write_lcd
+[ 719]    0945: B0 74                                 				mov al,'t'
+[ 720]    0947: E8 49 FF                              				call write_lcd
+[ 721]    094A: E8 1F FE                              				call delay3
+[ 722]    094D: C3                                    				ret
+[ 723]        :                                       disp_correct	endp
+[ 724]        :                                       
+[ 725]    094E:                                       disp_incorrect	proc near
+[ 726]    094E: E8 5D FF                              				call clear_lcd			;CALL CLEAR LCD
+[ 727]    0951: E8 05 FE                              				call delay
+[ 728]    0954: E8 02 FE                              				call delay
+[ 729]    0957: B0 49                                 				mov al,'I'
+[ 730]    0959: E8 37 FF                              				call write_lcd
+[ 731]    095C: B0 6E                                 				mov al,'n'
+[ 732]    095E: E8 32 FF                              				call write_lcd
+[ 733]    0961: B0 63                                 				mov al,'c'
+[ 734]    0963: E8 2D FF                              				call write_lcd
+[ 735]    0966: B0 6F                                 				mov al,'o'
+[ 736]    0968: E8 28 FF                              				call write_lcd
+[ 737]    096B: B0 72                                 				mov al,'r'
+[ 738]    096D: E8 23 FF                              				call write_lcd
+[ 739]    0970: B0 72                                 				mov al,'r'
+[ 740]    0972: E8 1E FF                              				call write_lcd
+[ 741]    0975: B0 65                                 				mov al,'e'
+[ 742]    0977: E8 19 FF                              				call write_lcd
+[ 743]    097A: B0 63                                 				mov al,'c'
+[ 744]    097C: E8 14 FF                              				call write_lcd
+[ 745]    097F: B0 74                                 				mov al,'t'
+[ 746]    0981: E8 0F FF                              				call write_lcd
+[ 747]    0984: E8 E5 FD                              				call delay3
+[ 748]    0987: C3                                    				ret
+[ 749]        :                                       disp_incorrect	endp
+[ 750]        :                                       
+[ 751]    0988:                                       disp_ent_pass	proc near
+[ 752]    0988: E8 23 FF                              				call clear_lcd			;???CALL
+[ 753]    098B: E8 CB FD                              				call delay
+[ 754]    098E: E8 C8 FD                              				call delay
+[ 755]    0991: B0 45                                 				mov al,'E'
+[ 756]    0993: E8 FD FE                              				call write_lcd
+[ 757]    0996: B0 6E                                 				mov al,'n'
+[ 758]    0998: E8 F8 FE                              				call write_lcd
+[ 759]    099B: B0 74                                 				mov al,'t'
+[ 760]    099D: E8 F3 FE                              				call write_lcd
+[ 761]    09A0: B0 65                                 				mov al,'e'
+[ 762]    09A2: E8 EE FE                              				call write_lcd
+[ 763]    09A5: B0 72                                 				mov al,'r'
+[ 764]    09A7: E8 E9 FE                              				call write_lcd
+[ 765]    09AA: B0 20                                 				mov al,' '
+[ 766]    09AC: E8 E4 FE                              				call write_lcd
+[ 767]    09AF: B0 50                                 				mov al,'P'
+[ 768]    09B1: E8 DF FE                              				call write_lcd
+[ 769]    09B4: B0 61                                 				mov al,'a'
+[ 770]    09B6: E8 DA FE                              				call write_lcd
+[ 771]    09B9: B0 73                                 				mov al,'s'
+[ 772]    09BB: E8 D5 FE                              				call write_lcd
+[ 773]    09BE: B0 73                                 				mov al,'s'
+[ 774]    09C0: E8 D0 FE                              				call write_lcd
+[ 775]    09C3: B0 77                                 				mov al,'w'
+[ 776]    09C5: E8 CB FE                              				call write_lcd
+[ 777]    09C8: B0 6F                                 				mov al,'o'
+[ 778]    09CA: E8 C6 FE                              				call write_lcd
+[ 779]    09CD: B0 72                                 				mov al,'r'
+[ 780]    09CF: E8 C1 FE                              				call write_lcd
+[ 781]    09D2: B0 64                                 				mov al,'d'
+[ 782]    09D4: E8 BC FE                              				call write_lcd
+[ 783]    09D7: E8 92 FD                              				call delay3
+[ 784]    09DA: C3                                    				ret
+[ 785]        :                                       disp_ent_pass	endp
+[ 786]        :                                       
+[ 787]    09DB:                                       disp_c1			proc near
+[ 788]    09DB: E8 D0 FE                              				call clear_lcd			;???CALL
+[ 789]    09DE: E8 78 FD                              				call delay
+[ 790]    09E1: E8 75 FD                              				call delay
+[ 791]    09E4: B0 50                                 				mov al,'P'
+[ 792]    09E6: E8 AA FE                              				call write_lcd
+[ 793]    09E9: B0 31                                 				mov al,'1'
+[ 794]    09EB: E8 A5 FE                              				call write_lcd
+[ 795]    09EE: C3                                    				ret
+[ 796]        :                                       disp_c1			endp
+[ 797]        :                                       
+[ 798]    09EF:                                       disp_c2			proc near
+[ 799]    09EF: E8 BC FE                              				call clear_lcd			;???CALL
+[ 800]    09F2: E8 64 FD                              				call delay
+[ 801]    09F5: E8 61 FD                              				call delay
+[ 802]    09F8: B0 50                                 				mov al,'P'
+[ 803]    09FA: E8 96 FE                              				call write_lcd
+[ 804]    09FD: B0 32                                 				mov al,'2'
+[ 805]    09FF: E8 91 FE                              				call write_lcd
+[ 806]    0A02: C3                                    				ret
+[ 807]        :                                       disp_c2			endp
+[ 808]        :                                       
+[ 809]    0A03:                                       disp_c3			proc near
+[ 810]    0A03: E8 A8 FE                              				call clear_lcd			;???CALL
+[ 811]    0A06: E8 50 FD                              				call delay
+[ 812]    0A09: E8 4D FD                              				call delay
+[ 813]    0A0C: B0 50                                 				mov al,'P'
+[ 814]    0A0E: E8 82 FE                              				call write_lcd
+[ 815]    0A11: B0 33                                 				mov al,'3'
+[ 816]    0A13: E8 7D FE                              				call write_lcd
+[ 817]    0A16: C3                                    				ret
+[ 818]        :                                       disp_c3			endp
+[ 819]        :                                       
+[ 820]    0A17:                                       disp_c4			proc near
+[ 821]    0A17: E8 94 FE                              				call clear_lcd			;???CALL
+[ 822]    0A1A: E8 3C FD                              				call delay
+[ 823]    0A1D: E8 39 FD                              				call delay
+[ 824]    0A20: B0 50                                 				mov al,'P'
+[ 825]    0A22: E8 6E FE                              				call write_lcd
+[ 826]    0A25: B0 34                                 				mov al,'4'
+[ 827]    0A27: E8 69 FE                              				call write_lcd
+[ 828]    0A2A: C3                                    				ret
+[ 829]        :                                       disp_c4			endp
+[ 830]        :                                       
+[ 831]    0A2B:                                       disp_c5			proc near
+[ 832]    0A2B: E8 80 FE                              				call clear_lcd			;???CALL
+[ 833]    0A2E: E8 28 FD                              				call delay
+[ 834]    0A31: E8 25 FD                              				call delay
+[ 835]    0A34: B0 50                                 				mov al,'P'
+[ 836]    0A36: E8 5A FE                              				call write_lcd
+[ 837]    0A39: B0 35                                 				mov al,'5'
+[ 838]    0A3B: E8 55 FE                              				call write_lcd
+[ 839]    0A3E: C3                                    				ret
+[ 840]        :                                       disp_c5			endp
+[ 841]        :                                       
+[ 842]    0A3F:                                       disp_c6			proc near
+[ 843]    0A3F: E8 6C FE                              				call clear_lcd			;???CALL
+[ 844]    0A42: E8 14 FD                              				call delay
+[ 845]    0A45: E8 11 FD                              				call delay
+[ 846]    0A48: B0 50                                 				mov al,'P'
+[ 847]    0A4A: E8 46 FE                              				call write_lcd
+[ 848]    0A4D: B0 36                                 				mov al,'6'
+[ 849]    0A4F: E8 41 FE                              				call write_lcd
+[ 850]    0A52: C3                                    				ret
+[ 851]        :                                       disp_c6			endp
+[ 852]        :                                       
+[ 853]    0A53:                                       disp_c7			proc near
+[ 854]    0A53: E8 58 FE                              				call clear_lcd			;???CALL
+[ 855]    0A56: E8 00 FD                              				call delay
+[ 856]    0A59: E8 FD FC                              				call delay
+[ 857]    0A5C: B0 50                                 				mov al,'P'
+[ 858]    0A5E: E8 32 FE                              				call write_lcd
+[ 859]    0A61: B0 37                                 				mov al,'7'
+[ 860]    0A63: E8 2D FE                              				call write_lcd
+[ 861]    0A66: C3                                    				ret
+[ 862]        :                                       disp_c7			endp
+[ 863]        :                                       
+[ 864]    0A67:                                       disp_c8			proc near
+[ 865]    0A67: E8 44 FE                              				call clear_lcd			;???CALL
+[ 866]    0A6A: E8 EC FC                              				call delay
+[ 867]    0A6D: E8 E9 FC                              				call delay
+[ 868]    0A70: B0 50                                 				mov al,'P'
+[ 869]    0A72: E8 1E FE                              				call write_lcd
+[ 870]    0A75: B0 38                                 				mov al,'8'
+[ 871]    0A77: E8 19 FE                              				call write_lcd
+[ 872]    0A7A: C3                                    				ret
+[ 873]        :                                       disp_c8			endp
+[ 874]        :                                       
+[ 875]    0A7B:                                       disp_admin		proc near
+[ 876]    0A7B: E8 30 FE                              				call clear_lcd			;???CALL
+[ 877]    0A7E: E8 D8 FC                              				call delay
+[ 878]    0A81: E8 D5 FC                              				call delay
+[ 879]    0A84: B0 41                                 				mov al,'A'
+[ 880]    0A86: E8 0A FE                              				call write_lcd
+[ 881]    0A89: B0 64                                 				mov al,'d'
+[ 882]    0A8B: E8 05 FE                              				call write_lcd
+[ 883]    0A8E: B0 6D                                 				mov al,'m'
+[ 884]    0A90: E8 00 FE                              				call write_lcd
+[ 885]    0A93: B0 69                                 				mov al,'i'
+[ 886]    0A95: E8 FB FD                              				call write_lcd
+[ 887]    0A98: B0 6E                                 				mov al,'n'
+[ 888]    0A9A: E8 F6 FD                              				call write_lcd
+[ 889]    0A9D: C3                                    				ret
+[ 890]        :                                       disp_admin		endp
+[ 891]        :                                       
+[ 892]    0A9E:                                       disp_voted		proc near
+[ 893]    0A9E: E8 0D FE                              				call clear_lcd			;???CALL
+[ 894]    0AA1: E8 B5 FC                              				call delay
+[ 895]    0AA4: E8 B2 FC                              				call delay
+[ 896]    0AA7: B0 56                                 				mov al,'V'
+[ 897]    0AA9: E8 E7 FD                              				call write_lcd
+[ 898]    0AAC: B0 6F                                 				mov al,'o'
+[ 899]    0AAE: E8 E2 FD                              				call write_lcd
+[ 900]    0AB1: B0 74                                 				mov al,'t'
+[ 901]    0AB3: E8 DD FD                              				call write_lcd
+[ 902]    0AB6: B0 65                                 				mov al,'e'
+[ 903]    0AB8: E8 D8 FD                              				call write_lcd
+[ 904]    0ABB: B0 64                                 				mov al,'d'
+[ 905]    0ABD: E8 D3 FD                              				call write_lcd
+[ 906]    0AC0: E8 EB FD                              				call clear_lcd
+[ 907]    0AC3: C3                                    				ret
+[ 908]        :                                       disp_voted      endp
+[ 909]        :                                       
+[ 910]    0AC4:                                       disp_candidate	proc near
+[ 911]    0AC4: E8 E7 FD                              				call clear_lcd			;???CALL
+[ 912]    0AC7: E8 8F FC                              				call delay
+[ 913]    0ACA: E8 8C FC                              				call delay
+[ 914]    0ACD: B0 43                                 				mov al,'C'
+[ 915]    0ACF: E8 C1 FD                              				call write_lcd
+[ 916]    0AD2: B0 41                                 				mov al,'A'
+[ 917]    0AD4: E8 BC FD                              				call write_lcd
+[ 918]    0AD7: B0 4E                                 				mov al,'N'
+[ 919]    0AD9: E8 B7 FD                              				call write_lcd
+[ 920]    0ADC: B0 44                                 				mov al,'D'
+[ 921]    0ADE: E8 B2 FD                              				call write_lcd
+[ 922]    0AE1: B0 49                                 				mov al,'I'
+[ 923]    0AE3: E8 AD FD                              				call write_lcd
+[ 924]    0AE6: B0 44                                 				mov al,'D'
+[ 925]    0AE8: E8 A8 FD                              				call write_lcd
+[ 926]    0AEB: B0 41                                 				mov al,'A'
+[ 927]    0AED: E8 A3 FD                              				call write_lcd
+[ 928]    0AF0: B0 54                                 				mov al,'T'
+[ 929]    0AF2: E8 9E FD                              				call write_lcd
+[ 930]    0AF5: B0 45                                 				mov al,'E'
+[ 931]    0AF7: E8 99 FD                              				call write_lcd
+[ 932]    0AFA: B0 20                                 				mov al,' '
+[ 933]    0AFC: E8 94 FD                              				call write_lcd
+[ 934]    0AFF: C3                                    				ret
+[ 935]        :                                       disp_candidate	endp
+[ 936]        :                                       
+[ 937]    0B00:                                       disp_v1			proc near
+[ 938]    0B00: B0 31                                 				mov al,'1'
+[ 939]    0B02: E8 8E FD                              				call write_lcd
+[ 940]    0B05: B0 3A                                 				mov al,':'
+[ 941]    0B07: E8 89 FD                              				call write_lcd
+[ 942]    0B0A: B0 20                                 				mov al,' '
+[ 943]    0B0C: E8 84 FD                              				call write_lcd
+[ 944]    0B0F: C3                                    				ret
+[ 945]        :                                       disp_v1			endp
+[ 946]        :                                       
+[ 947]    0B10:                                       disp_v2			proc near
+[ 948]    0B10: B0 32                                 				mov al,'2'
+[ 949]    0B12: E8 7E FD                              				call write_lcd
+[ 950]    0B15: B0 3A                                 				mov al,':'
+[ 951]    0B17: E8 79 FD                              				call write_lcd
+[ 952]    0B1A: B0 20                                 				mov al,' '
+[ 953]    0B1C: E8 74 FD                              				call write_lcd
+[ 954]    0B1F: C3                                    				ret
+[ 955]        :                                       disp_v2			endp
+[ 956]        :                                       
+[ 957]    0B20:                                       disp_v3			proc near
+[ 958]    0B20: B0 33                                 				mov al,'3'
+[ 959]    0B22: E8 6E FD                              				call write_lcd
+[ 960]    0B25: B0 3A                                 				mov al,':'
+[ 961]    0B27: E8 69 FD                              				call write_lcd
+[ 962]    0B2A: B0 20                                 				mov al,' '
+[ 963]    0B2C: E8 64 FD                              				call write_lcd
+[ 964]    0B2F: C3                                    				ret
+[ 965]        :                                       disp_v3			endp
+[ 966]        :                                       
+[ 967]    0B30:                                       disp_v4			proc near
+[ 968]    0B30: B0 34                                 				mov al,'4'
+[ 969]    0B32: E8 5E FD                              				call write_lcd
+[ 970]    0B35: B0 3A                                 				mov al,':'
+[ 971]    0B37: E8 59 FD                              				call write_lcd
+[ 972]    0B3A: B0 20                                 				mov al,' '
+[ 973]    0B3C: E8 54 FD                              				call write_lcd
+[ 974]    0B3F: C3                                    				ret
+[ 975]        :                                       disp_v4			endp
+[ 976]        :                                       
+[ 977]    0B40:                                       disp_v5			proc near
+[ 978]    0B40: B0 35                                 				mov al,'5'
+[ 979]    0B42: E8 4E FD                              				call write_lcd
+[ 980]    0B45: B0 3A                                 				mov al,':'
+[ 981]    0B47: E8 49 FD                              				call write_lcd
+[ 982]    0B4A: B0 20                                 				mov al,' '
+[ 983]    0B4C: E8 44 FD                              				call write_lcd
+[ 984]    0B4F: C3                                    				ret
+[ 985]        :                                       disp_v5			endp
+[ 986]        :                                       
+[ 987]    0B50:                                       disp_v6			proc near
+[ 988]    0B50: B0 36                                 				mov al,'6'
+[ 989]    0B52: E8 3E FD                              				call write_lcd
+[ 990]    0B55: B0 3A                                 				mov al,':'
+[ 991]    0B57: E8 39 FD                              				call write_lcd
+[ 992]    0B5A: B0 20                                 				mov al,' '
+[ 993]    0B5C: E8 34 FD                              				call write_lcd
+[ 994]    0B5F: C3                                    				ret
+[ 995]        :                                       disp_v6			endp
+[ 996]        :                                       
+[ 997]    0B60:                                       disp_v7			proc near
+[ 998]    0B60: B0 37                                 				mov al,'7'
+[ 999]    0B62: E8 2E FD                              				call write_lcd
+[1000]    0B65: B0 3A                                 				mov al,':'
+[1001]    0B67: E8 29 FD                              				call write_lcd
+[1002]    0B6A: B0 20                                 				mov al,' '
+[1003]    0B6C: E8 24 FD                              				call write_lcd
+[1004]    0B6F: C3                                    				ret
+[1005]        :                                       disp_v7			endp
+[1006]        :                                       
+[1007]    0B70:                                       disp_v8			proc near
+[1008]    0B70: B0 38                                 				mov al,'8'
+[1009]    0B72: E8 1E FD                              				call write_lcd
+[1010]    0B75: B0 3A                                 				mov al,':'
+[1011]    0B77: E8 19 FD                              				call write_lcd
+[1012]    0B7A: B0 20                                 				mov al,' '
+[1013]    0B7C: E8 14 FD                              				call write_lcd
+[1014]    0B7F: C3                                    				ret
+[1015]        :                                       disp_v8			endp
+[1016]        :                                       
+[1017]        :                                       
+[1018]    0B80:                                       disp_passwd		proc near
+[1019]        :                                       				;call clear_lcd			;???CALL
+[1020]    0B80: B0 20                                 				mov al,' '
+[1021]    0B82: E8 0E FD                              				call write_lcd
+[1022]    0B85: B0 50                                 				mov al,'P'
+[1023]    0B87: E8 09 FD                              				call write_lcd
+[1024]    0B8A: B0 61                                 				mov al,'a'
+[1025]    0B8C: E8 04 FD                              				call write_lcd
+[1026]    0B8F: B0 73                                 				mov al,'s'
+[1027]    0B91: E8 FF FC                              				call write_lcd
+[1028]    0B94: B0 73                                 				mov al,'s'
+[1029]    0B96: E8 FA FC                              				call write_lcd
+[1030]    0B99: B0 77                                 				mov al,'w'
+[1031]    0B9B: E8 F5 FC                              				call write_lcd
+[1032]    0B9E: B0 6F                                 				mov al,'o'
+[1033]    0BA0: E8 F0 FC                              				call write_lcd
+[1034]    0BA3: B0 72                                 				mov al,'r'
+[1035]    0BA5: E8 EB FC                              				call write_lcd
+[1036]    0BA8: B0 64                                 				mov al,'d'
+[1037]    0BAA: E8 E6 FC                              				call write_lcd
+[1038]    0BAD: E8 BC FB                              				call delay3
+[1039]    0BB0: C3                                    				ret
+[1040]        :                                       disp_passwd		endp
+[1041]        :                                       
+[1042]    0BB1:                                       disp_start_voting proc near
+[1043]    0BB1: E8 FA FC                              				call clear_lcd
+[1044]    0BB4: E8 A2 FB                              				call delay
+[1045]    0BB7: E8 9F FB                              				call delay
+[1046]    0BBA: B0 53                                 				mov al,'S'
+[1047]    0BBC: E8 D4 FC                              				call write_lcd
+[1048]    0BBF: B0 74                                 				mov al,'t'
+[1049]    0BC1: E8 CF FC                              				call write_lcd
+[1050]    0BC4: B0 61                                 				mov al,'a'
+[1051]    0BC6: E8 CA FC                              				call write_lcd
+[1052]    0BC9: B0 72                                 				mov al,'r'
+[1053]    0BCB: E8 C5 FC                              				call write_lcd
+[1054]    0BCE: B0 74                                 				mov al,'t'
+[1055]    0BD0: E8 C0 FC                              				call write_lcd
+[1056]    0BD3: B0 20                                 				mov al,' '
+[1057]    0BD5: E8 BB FC                              				call write_lcd
+[1058]    0BD8: B0 56                                 				mov al,'V'
+[1059]    0BDA: E8 B6 FC                              				call write_lcd
+[1060]    0BDD: B0 6F                                 				mov al,'o'
+[1061]    0BDF: E8 B1 FC                              				call write_lcd
+[1062]    0BE2: B0 74                                 				mov al,'t'
+[1063]    0BE4: E8 AC FC                              				call write_lcd
+[1064]    0BE7: B0 69                                 				mov al,'i'
+[1065]    0BE9: E8 A7 FC                              				call write_lcd
+[1066]    0BEC: B0 6E                                 				mov al,'n'
+[1067]    0BEE: E8 A2 FC                              				call write_lcd
+[1068]    0BF1: B0 67                                 				mov al,'g'
+[1069]    0BF3: E8 9D FC                              				call write_lcd
+[1070]    0BF6: E8 73 FB                              				call delay3
+[1071]    0BF9: E8 B2 FC                              				call clear_lcd
+[1072]    0BFC: C3                                    				ret
+[1073]        :                                       disp_start_voting endp	
+[1074]        :                                       
+[1075]    0BFD:                                       disp_not_locked        proc near
+[1076]    0BFD: E8 AE FC                              					call clear_lcd
+[1077]    0C00: E8 56 FB                              					call delay
+[1078]    0C03: E8 53 FB                              					call delay
+[1079]    0C06: B0 4E                                 					mov al,'N'
+[1080]    0C08: E8 88 FC                              					call write_lcd
+[1081]    0C0B: B0 6F                                 					mov al,'o'
+[1082]    0C0D: E8 83 FC                              					call write_lcd
+[1083]    0C10: B0 74                                 					mov al,'t'
+[1084]    0C12: E8 7E FC                              					call write_lcd
+[1085]    0C15: B0 20                                 					mov al,' '
+[1086]    0C17: E8 79 FC                              					call write_lcd
+[1087]    0C1A: B0 4C                                 					mov al,'L'
+[1088]    0C1C: E8 74 FC                              					call write_lcd
+[1089]    0C1F: B0 6F                                 					mov al,'o'
+[1090]    0C21: E8 6F FC                              					call write_lcd
+[1091]    0C24: B0 63                                 					mov al,'c'
+[1092]    0C26: E8 6A FC                              					call write_lcd
+[1093]    0C29: B0 6B                                 					mov al,'k'
+[1094]    0C2B: E8 65 FC                              					call write_lcd
+[1095]    0C2E: B0 65                                 					mov al,'e'
+[1096]    0C30: E8 60 FC                              					call write_lcd
+[1097]    0C33: B0 64                                 					mov al,'d'
+[1098]    0C35: E8 5B FC                              					call write_lcd
+[1099]    0C38: E8 31 FB                              					call delay3
+[1100]    0C3B: C3                                    					ret
+[1101]        :                                       disp_not_locked        endp			
+[1102]        :                                       
+[1103]    0C3C:                                       disp_alarm		proc near
+[1104]    0C3C: E8 6F FC                              				call clear_lcd			;???CALL
+[1105]    0C3F: E8 17 FB                              				call delay
+[1106]    0C42: E8 14 FB                              				call delay
+[1107]    0C45: B0 41                                 				mov al,'A'
+[1108]    0C47: E8 49 FC                              				call write_lcd
+[1109]    0C4A: B0 4C                                 				mov al,'L'
+[1110]    0C4C: E8 44 FC                              				call write_lcd
+[1111]    0C4F: B0 41                                 				mov al,'A'
+[1112]    0C51: E8 3F FC                              				call write_lcd
+[1113]    0C54: B0 52                                 				mov al,'R'
+[1114]    0C56: E8 3A FC                              				call write_lcd
+[1115]    0C59: B0 4D                                 				mov al,'M'
+[1116]    0C5B: E8 35 FC                              				call write_lcd
+[1117]    0C5E: B0 21                                 				mov al,'!'
+[1118]    0C60: E8 30 FC                              				call write_lcd
+[1119]    0C63: 51                                    				push cx
+[1120]    0C64: B9 0A 00                              				mov cx,10
+[1121]    0C67: E8 EF FA                              	loo2:		call delay
+[1122]    0C6A: E8 EC FA                              				call delay
+[1123]    0C6D: E8 E9 FA                              				call delay
+[1124]    0C70: E2 F5                                 				loop loo2
+[1125]    0C72: 59                                    				pop cx
+[1126]    0C73: C3                                    				ret
+[1127]        :                                       disp_alarm		endp
+[1128]        :                                       				
+[1129]    0C74:                                       raise_alarm		proc near
+[1130]    0C74: E8 C5 FF                              CALL disp_alarm
+[1131]    0C77: B0 01                                 				mov al,00000001b  ;bsr mode of portc to raise the alarm led
+[1132]    0C79: E6 04                                 				out portC1,al
+[1133]    0C7B: 51                                    				push cx
+[1134]    0C7C: B9 1E 00                              				mov cx,30
+[1135]    0C7F: E8 D7 FA                              	loo:		call delay
+[1136]    0C82: E8 D4 FA                              				call delay
+[1137]    0C85: E8 D1 FA                              				call delay
+[1138]    0C88: E2 F5                                 				loop loo
+[1139]    0C8A: 59                                    				pop cx
+[1140]    0C8B: B0 00                                 				mov al,00000000b ;bsr mode of portc to lower the alarm led
+[1141]    0C8D: E6 04                                 				out portC1,al
+[1142]    0C8F: C3                                    				ret
+[1143]        :                                       raise_alarm		endp
+[1144]        :                                       
+[1145]    0C90:                                       ISR_INT2:
+[1146]        :                                       	;mov al,'L'
+[1147]        :                                       	;call write_lcd
+[1148]    0C90:                                       	keepPolling:
+[1149]    0C90: E8 25 FA                              	CALL getKeyData	
+[1150]    0C93: BF 00 00                              	MOV DI,00H
+[1151]    0C96: B9 08 00                              	MOV CX,8D										;???is it for skipping first 8 keys only used to vote
+[1152]    0C99:                                       POSITION:
+[1153]    0C99: 47                                    	INC DI
+[1154]    0C9A: 47                                    	INC DI
+[1155]    0C9B: E2 FC                                 	LOOP POSITION
+[1156]    0C9D: 8B 95 80 04                           	MOV DX,DATA_K[DI]
+[1157]    0CA1: 3B DA                                 	CMP BX,DX
+[1158]    0CA3: 75 12                                 	JNZ CANDIDATE_2
+[1159]    0CA5: E8 1C FE                              	call disp_candidate
+[1160]    0CA8: E8 55 FE                              	call disp_v1
+[1161]    0CAB: 8B 16 00 05                           	MOV dx,c1votes
+[1162]    0CAF: E8 D1 00                              	call convertToBCD
+[1163]    0CB2: E8 2D 01                              	call disp_vote_cnt
+[1164]        :                                       	;CALL disp_votes
+[1165]    0CB5: EB D9                                 	JMP keepPolling
+[1166]        :                                       
+[1167]    0CB7:                                       CANDIDATE_2:
+[1168]    0CB7: 47                                    	INC DI
+[1169]    0CB8: 47                                    	INC DI
+[1170]    0CB9: 8B 95 80 04                           	MOV DX,DATA_K[DI]
+[1171]    0CBD: 3B DA                                 	CMP BX,DX
+[1172]    0CBF: 75 12                                 	JNZ CANDIDATE_3
+[1173]    0CC1: E8 00 FE                              	call disp_candidate
+[1174]    0CC4: E8 49 FE                              	call disp_v2
+[1175]    0CC7: 8B 16 02 05                           	MOV dx,c2votes
+[1176]    0CCB: E8 B5 00                              	call convertToBCD
+[1177]    0CCE: E8 11 01                              	call disp_vote_cnt
+[1178]        :                                       	;CALL disp_votes
+[1179]    0CD1: EB BD                                 	JMP keepPolling
+[1180]        :                                       
+[1181]    0CD3:                                       CANDIDATE_3:
+[1182]    0CD3: 47                                    	INC DI
+[1183]    0CD4: 47                                    	INC DI
+[1184]    0CD5: 8B 95 80 04                           	MOV DX,DATA_K[DI]
+[1185]    0CD9: 3B DA                                 	CMP BX,DX
+[1186]    0CDB: 75 12                                 	JNZ CANDIDATE_4
+[1187]    0CDD: E8 E4 FD                              	call disp_candidate
+[1188]    0CE0: E8 3D FE                              	call disp_v3
+[1189]    0CE3: 8B 16 04 05                           	MOV dx,c3votes
+[1190]    0CE7: E8 99 00                              	call convertToBCD
+[1191]    0CEA: E8 F5 00                              	call disp_vote_cnt
+[1192]        :                                       	;CALL disp_votes
+[1193]    0CED: EB A1                                 	JMP keepPolling
+[1194]        :                                       
+[1195]    0CEF:                                       CANDIDATE_4:
+[1196]    0CEF: 47                                    	INC DI
+[1197]    0CF0: 47                                    	INC DI
+[1198]    0CF1: 8B 95 80 04                           	MOV DX,DATA_K[DI]
+[1199]    0CF5: 3B DA                                 	CMP BX,DX
+[1200]    0CF7: 75 12                                 	JNZ CANDIDATE_5
+[1201]    0CF9: E8 C8 FD                              	call disp_candidate
+[1202]    0CFC: E8 31 FE                              	call disp_v4
+[1203]    0CFF: 8B 16 06 05                           	MOV dx,c4votes
+[1204]    0D03: E8 7D 00                              	call convertToBCD
+[1205]    0D06: E8 D9 00                              	call disp_vote_cnt
+[1206]        :                                       	;CALL disp_votes
+[1207]    0D09: EB 85                                 	JMP keepPolling
+[1208]        :                                       
+[1209]        :                                       
+[1210]    0D0B:                                       CANDIDATE_5:
+[1211]    0D0B: 47                                    	INC DI
+[1212]    0D0C: 47                                    	INC DI
+[1213]    0D0D: 8B 95 80 04                           	MOV DX,DATA_K[DI]
+[1214]    0D11: 3B DA                                 	CMP BX,DX
+[1215]    0D13: 75 13                                 	JNZ CANDIDATE_6
+[1216]    0D15: E8 AC FD                              	call disp_candidate
+[1217]    0D18: E8 25 FE                              	call disp_v5
+[1218]    0D1B: 8B 16 08 05                           	MOV dx,c5votes
+[1219]    0D1F: E8 61 00                              	call convertToBCD
+[1220]    0D22: E8 BD 00                              	call disp_vote_cnt
+[1221]        :                                       	;CALL disp_votes
+[1222]    0D25: E9 68 FF                              	JMP keepPolling
+[1223]        :                                       
+[1224]    0D28:                                       CANDIDATE_6:
+[1225]    0D28: 47                                    	INC DI
+[1226]    0D29: 47                                    	INC DI
+[1227]    0D2A: 8B 95 80 04                           	MOV DX,DATA_K[DI]
+[1228]    0D2E: 3B DA                                 	CMP BX,DX
+[1229]    0D30: 75 13                                 	JNZ CANDIDATE_7
+[1230]    0D32: E8 8F FD                              	call disp_candidate
+[1231]    0D35: E8 18 FE                              	call disp_v6
+[1232]    0D38: 8B 16 0A 05                           	MOV dx,c6votes
+[1233]    0D3C: E8 44 00                              	call convertToBCD
+[1234]    0D3F: E8 A0 00                              	call disp_vote_cnt
+[1235]        :                                       	;CALL disp_votes
+[1236]    0D42: E9 4B FF                              	JMP keepPolling
+[1237]        :                                       
+[1238]    0D45:                                       CANDIDATE_7:
+[1239]    0D45: 47                                    	INC DI
+[1240]    0D46: 47                                    	INC DI
+[1241]    0D47: 8B 95 80 04                           	MOV DX,DATA_K[DI]
+[1242]    0D4B: 3B DA                                 	CMP BX,DX
+[1243]    0D4D: 75 13                                 	JNZ CANDIDATE_8
+[1244]    0D4F: E8 72 FD                              	call disp_candidate
+[1245]    0D52: E8 0B FE                              	call disp_v7
+[1246]    0D55: 8B 16 0C 05                           	MOV dx,c7votes
+[1247]    0D59: E8 27 00                              	call convertToBCD
+[1248]    0D5C: E8 83 00                              	call disp_vote_cnt
+[1249]        :                                       	;CALL disp_votes
+[1250]    0D5F: E9 2E FF                              	JMP keepPolling
+[1251]        :                                       
+[1252]    0D62:                                       CANDIDATE_8:
+[1253]    0D62: 47                                    	INC DI
+[1254]    0D63: 47                                    	INC DI
+[1255]    0D64: 8B 95 80 04                           	MOV DX,DATA_K[DI]
+[1256]    0D68: 3B DA                                 	CMP BX,DX
+[1257]    0D6A: 74 03 E9 21 FF                        	JNZ keepPolling
+[1258]    0D6F: E8 52 FD                              	call disp_candidate
+[1259]    0D72: E8 FB FD                              	call disp_v8
+[1260]    0D75: 8B 16 0E 05                           	MOV dx,c8votes
+[1261]    0D79: E8 07 00                              	call convertToBCD
+[1262]    0D7C: E8 63 00                              	call disp_vote_cnt
+[1263]        :                                       	;CALL disp_votes
+[1264]    0D7F: E9 0E FF                              	JMP keepPolling
+[1265]        :                                       
+[1266]    0D82: CF                                    	IRET
+[1267]        :                                       
+[1268]        :                                       	
+[1269]    0D83:                                       convertToBCD	proc	near
+[1270]    0D83: B8 00 00                              				mov		AX,0000H
+[1271]    0D86: B9 00 00                              				mov		CX,0
+[1272]        :                                       				
+[1273]    0D89:                                       		d1:
+[1274]        :                                       
+[1275]    0D89: 41                                    				inc     cx				
+[1276]        :                                       
+[1277]    0D8A: D1 E0                                 				SHL     AX,1
+[1278]    0D8C: D1 E2                                 				SHL 	DX,1			;Hex Data to be converted to BCD form is in DX
+[1279]    0D8E: 73 01                                 				jnc	    d2
+[1280]    0D90: 40                                    				inc 	AX
+[1281]    0D91:                                       				d2:
+[1282]        :                                       			
+[1283]    0D91: 83 F9 10                              				cmp    cx,16
+[1284]    0D94: 74 4B                                 				jz 	   finish
+[1285]        :                                       		
+[1286]    0D96: 8A DC                                 				mov    bl,ah		;BIN-4
+[1287]    0D98: 80 E3 F0                              				and    bl,0F0h
+[1288]    0D9B: D0 C3                                 				rol    bl,1
+[1289]    0D9D: D0 C3                                 				rol    bl,1
+[1290]    0D9F: D0 C3                                 				rol    bl,1
+[1291]    0DA1: D0 C3                                 				rol    bl,1
+[1292]    0DA3: 80 FB 05                              				cmp    bl,5
+[1293]    0DA6: 72 03                                 				jb    d3
+[1294]    0DA8: 05 00 30                              				add    AX,3000h
+[1295]        :                                       
+[1296]    0DAB:                                       		d3:
+[1297]    0DAB: 8A DC                                 				mov	   bl,ah 		;BIN-3
+[1298]    0DAD: 80 E3 0F                              				and    bl,0Fh
+[1299]    0DB0: 80 FB 05                              				cmp	   bl,5
+[1300]    0DB3: 72 03                                 				jb    d4
+[1301]    0DB5: 05 00 03                              				add    AX,0300h
+[1302]    0DB8:                                       		d4:
+[1303]    0DB8: 8A D8                                 				mov    bl,al		;BIN-2
+[1304]    0DBA: 80 E3 F0                              				and    bl,0F0h
+[1305]    0DBD: D0 C3                                 				rol    bl,1
+[1306]    0DBF: D0 C3                                 				rol    bl,1
+[1307]    0DC1: D0 C3                                 				rol    bl,1
+[1308]    0DC3: D0 C3                                 				rol    bl,1
+[1309]    0DC5: 80 FB 05                              				cmp    bl,5
+[1310]    0DC8: 72 03                                 				jb    d5
+[1311]    0DCA: 05 30 00                              				add    AX,0030h	
+[1312]    0DCD:                                       		d5:
+[1313]    0DCD: 8A D8                                 				mov	   bl,al 		;BIN-1
+[1314]    0DCF: 80 E3 0F                              				and    bl,0Fh
+[1315]    0DD2: 80 FB 05                              				cmp    bl,5
+[1316]    0DD5: 72 03                                 				jb    d6
+[1317]    0DD7: 05 03 00                              				add    AX,0003h
+[1318]        :                                       
+[1319]    0DDA:                                       		d6:
+[1320]        :                                       				
+[1321]    0DDA: 83 F9 10                              				cmp   cx,16
+[1322]    0DDD: 77 02                                 				ja finish
+[1323]    0DDF: EB A8                                 				jmp d1
+[1324]    0DE1:                                       				finish:
+[1325]    0DE1: C3                                    				ret
+[1326]        :                                       convertToBCD 	endp
+[1327]        :                                       
+[1328]    0DE2:                                       disp_vote_cnt 	proc near
+[1329]    0DE2: 8B C8                                 				mov    cx,AX
+[1330]    0DE4: 8A FC                                 				mov    bh,ah
+[1331]    0DE6: 80 E7 F0                              				and    bh,0F0h
+[1332]    0DE9: D0 C7                                 				rol    bh,1
+[1333]    0DEB: D0 C7                                 				rol    bh,1
+[1334]    0DED: D0 C7                                 				rol    bh,1
+[1335]    0DEF: D0 C7                                 				rol    bh,1
+[1336]    0DF1: 8B C1                                 				mov    AX,cx
+[1337]        :                                       
+[1338]    0DF3: 8B C8                                 				mov    cx,AX
+[1339]    0DF5: 80 C7 30                              				add     bh,30h
+[1340]    0DF8: B0 20                                 				mov    al,' '
+[1341]    0DFA: E8 96 FA                              				call   write_lcd
+[1342]    0DFD: 8A C7                                 				mov    al,bh 		; To display one character
+[1343]    0DFF: E8 91 FA                              				call   write_lcd
+[1344]    0E02: 8B C1                                 				mov    AX,cx
+[1345]        :                                       				
+[1346]    0E04: 8B C8                                 				mov    cx,AX
+[1347]    0E06: 8A FC                                 				mov    bh,ah
+[1348]    0E08: 80 E7 0F                              				and    bh,0Fh
+[1349]    0E0B: 8B C1                                 				mov    AX,cx
+[1350]        :                                       
+[1351]    0E0D: 8B C8                                 				mov    cx,AX
+[1352]    0E0F: 80 C7 30                              				add     bh,30h
+[1353]    0E12: 8A C7                                 				mov 	al,bh  		; To display one character
+[1354]    0E14: E8 7C FA                              				call   write_lcd
+[1355]    0E17: 8B C1                                 				mov    AX,cx
+[1356]        :                                       
+[1357]    0E19: 8B C8                                 				mov    cx,AX
+[1358]    0E1B: 8A F8                                 				mov    bh,al
+[1359]    0E1D: 80 E7 F0                              				and    bh,0F0h
+[1360]    0E20: D0 C7                                 				rol    bh,1
+[1361]    0E22: D0 C7                                 				rol    bh,1
+[1362]    0E24: D0 C7                                 				rol    bh,1
+[1363]    0E26: D0 C7                                 				rol    bh,1
+[1364]    0E28: 8B C1                                 				mov    AX,cx
+[1365]        :                                       				
+[1366]    0E2A: 8B C8                                 				mov    cx,AX
+[1367]    0E2C: 80 C7 30                              				add     bh,30h
+[1368]    0E2F: 8A C7                                 				mov 	al,bh 		; To display one character
+[1369]    0E31: E8 5F FA                              				call   write_lcd
+[1370]    0E34: 8B C1                                 				mov    AX,cx
+[1371]        :                                       
+[1372]    0E36: 8B C8                                 				mov    cx,AX
+[1373]    0E38: 8A F8                                 				mov    bh,al
+[1374]    0E3A: 80 E7 0F                              				and    bh,0Fh
+[1375]    0E3D: 8B C1                                 				mov    AX,cx
+[1376]        :                                       
+[1377]    0E3F: 8B C8                                 				mov    cx,AX
+[1378]    0E41: 80 C7 30                              				add     bh,30h
+[1379]    0E44: 8A C7                                 				mov 	al,bh  		; To display one character
+[1380]    0E46: E8 4A FA                              				call   write_lcd
+[1381]    0E49: 8B C1                                 				mov    AX,cx
+[1382]    0E4B: 51                                    				push cx
+[1383]    0E4C: B9 1E 00                              				mov cx,30
+[1384]    0E4F: E8 07 F9                              	loo3:		call delay
+[1385]    0E52: E8 04 F9                              				call delay
+[1386]    0E55: E8 01 F9                              				call delay
+[1387]    0E58: 49 E3 03 E9 21 FE                     				loop loo
+[1388]    0E5E: 59                                    				pop cx
+[1389]    0E5F: E8 4C FA                              				call clear_lcd
+[1390]    0E62: C3                                    				ret
+[1391]        :                                       disp_vote_cnt	endp
+[1392]        :                                       
+[1393]        :                                       
+[1394]        :                                       
+[1395]        :                                       
+ 
+===================================================================================================
+ 
+
+
+
+
+===================================================================================================
